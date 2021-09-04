@@ -1,0 +1,3 @@
+language = "C++"
+run = "rm -f *.gcno *.gcda *.gcov; clear; echo -e \"\\e[33m\\e[0m g++ -std=c++17 --coverage main.cpp quadratic.cpp\"; if g++ -std=c++17 --coverage main.cpp quadratic.cpp; then echo -e \"\\e[33m\\e[0m ./a.out\"; ./a.out; echo -e \"\\e[33m\\e[0m gcov -mnr quadratic.cpp\"; gcov -mnr quadratic.cpp; rm -f *.gcno *.gcda *.gcov; else echo -e \"\\e[1;31mBuild Failed\\e[0m\"; rm -f ./a.out; fi"
+onBoot = "echo Try Harder"
